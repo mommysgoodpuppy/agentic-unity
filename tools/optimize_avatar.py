@@ -52,8 +52,8 @@ class Runner:
         self.editor, self.env, self.n = unity_env.find_editor(project), unity_env.display_env(), 0
 
     def stage(self, name):
-        if subprocess.run(["pgrep", "-x", "Unity"], capture_output=True).returncode == 0:
-            raise SystemExit("A Unity editor is running; close it (this project must not be open) and rerun.")
+        if unity_env.editor_open(self.project):
+            raise SystemExit("This project is open in a Unity editor; close it and rerun.")
         self.n += 1
         log = self.report_dir / f"{self.n:02d}-{name}.log"
         print(f"[{self.n:02d}] {name} ...", flush=True)
@@ -70,8 +70,8 @@ class Runner:
 
     def method(self, method, name, extra):
         """Run another agent batch method (its log lines start with [<class>])."""
-        if subprocess.run(["pgrep", "-x", "Unity"], capture_output=True).returncode == 0:
-            raise SystemExit("A Unity editor is running; close it (this project must not be open) and rerun.")
+        if unity_env.editor_open(self.project):
+            raise SystemExit("This project is open in a Unity editor; close it and rerun.")
         self.n += 1
         log = self.report_dir / f"{self.n:02d}-{name}.log"
         print(f"[{self.n:02d}] {name} ...", flush=True)

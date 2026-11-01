@@ -62,3 +62,12 @@ def display_env():
             if key in ("DISPLAY", "WAYLAND_DISPLAY", "XAUTHORITY", "XDG_RUNTIME_DIR"):
                 env[key] = value
     return env
+
+
+def editor_open(project):
+    """Whether a running Unity editor has this project open. Other projects' editors don't matter."""
+    try:
+        listing = subprocess.run(["pgrep", "-a", "-x", "Unity"], capture_output=True, text=True).stdout
+    except FileNotFoundError:
+        return False  # No pgrep here; Unity itself refuses a project that's open.
+    return str(Path(project).resolve()) in listing
