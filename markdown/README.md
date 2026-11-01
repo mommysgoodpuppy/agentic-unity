@@ -29,8 +29,6 @@ vrmodem's protocol and ShaderEmu's emulator, which are projects of their own.
 
 ## Open
 
-- Open-editor workflow on these copies: live `edit`, `undo`, `redo`, `save`, `checkpoint`, `frame`, `closeup`, and the
-  Cross Section window's controls by hand.
 - What makes a live request sit unclaimed until Unity is in front. It's reported to happen sometimes, but wasn't
   reproduced with the editor minimized.
 - Optimizer on an avatar that exercises Meshia and PhysBone merging. The Robot sample's one mesh counts as its

@@ -78,12 +78,12 @@ an agent can update it, if you allow that.
     `FirstPerson`; `Verify` runs, and is only useful for object toggles;
   - the optimizer from start to finish, with its AAO stages and comparison renders;
   - the horn example's 35 checks;
-  - in an open editor: `list`, `inspect`, `refresh`, `scene-view` (its render was confirmed to match the Scene view),
-    and the Cross Section tool's `capture`, `open` and `capture-view`.
+  - in an open editor: `list`, `inspect`, `open`, `frame`, `preview`, `closeup`, `edit` (including rejected batches),
+    `undo`, `redo`, `checkpoint`, `save`, `refresh`, `scene-view` (its render was confirmed to match the Scene view),
+    and the Cross Section tool's window, `capture`, `open` and `capture-view`.
 - **Used for real on an actual avatar, on older package versions:** live recipes, the optimizer with decimation
   and mesh cuts, and headless avatar upload (in VRChat). World export and publish also, in an earlier form.
-- **Not run on these copies yet:** live `edit`, `undo`, `redo`, `save`, `checkpoint`, `frame` and `closeup`, using the
-  Cross Section window's controls by hand,
+- **Not run on these copies yet:** the SDK-panel `upload` command,
   `AgentWorldBuild` (it compiles against Worlds SDK 3.10.5), a real upload (the refusal without a slot was
   checked), Meshia decimation and PhysBone merging (the Robot gave them nothing to do), `assemble`,
   `import`, `swap-meshes`, and the accessory commands.
