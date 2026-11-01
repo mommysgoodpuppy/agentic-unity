@@ -1,0 +1,16 @@
+[project]
+name = "agentic-unity"
+version = "0.1.0"
+description = "Tools for agent-driven VRChat Unity work"
+readme = "README.md"
+license = "MIT"
+requires-python = ">=3.11"
+dependencies = [
+    "matplotlib>=3.11.2",
+    "numpy",     # compare_optimized.py, optimize_avatar.py, audit_base_mesh_uv.py, plot_avatar_sections.py
+    "pillow",    # compare_optimized.py, optimize_avatar.py
+    "scipy",     # audit_base_mesh_uv.py
+]
+
+[tool.uv]
+package = false
