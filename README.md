@@ -12,7 +12,7 @@ These tools grew out of real avatar and world projects on Linux. See [What's tes
 
 ## Start
 
-1. Install the toolchain: [docs/setup.md](docs/setup.md). Check [docs/dependencies.md](docs/dependencies.md) for what you need.
+1. Install the toolchain: [docs/setup.md](docs/setup.md), plus [docs/linux.md](docs/linux.md) on Linux. Check [docs/dependencies.md](docs/dependencies.md) for what you need.
 2. Back up your project, or work in a copy.
 3. Set up Python, then install the editor helpers:
 
@@ -56,6 +56,7 @@ an agent can update it, if you allow that.
 | [docs/optimization.md](docs/optimization.md) | One-command Poor/Medium variants; AAO, Meshia and d4rk compared |
 | [docs/world-builds.md](docs/world-builds.md) | Headless world export, local test in the real client, reading its logs, publish |
 | [docs/fxc2.md](docs/fxc2.md) | Shaders too heavy for Microsoft's compiler, and building them on Linux |
+| [docs/linux.md](docs/linux.md) | **On Linux, start here:** ALCOM, Vulkan, missing libraries, shaders, testing, VRChat under Proton |
 | [docs/gotchas.md](docs/gotchas.md) | The expensive lessons. Worth having your agent read this first |
 | [docs/dependencies.md](docs/dependencies.md) | What each part needs, and what fails without it. The optimizer needs the most |
 | [examples/](examples/README.md) | A worked example of an agent modeling and shading a horn from code, with what it learned; plus [tools hardcoded to one avatar](examples/hardcoded/README.md) (leash, clipping, hat, sock) as examples of other kinds of tool |

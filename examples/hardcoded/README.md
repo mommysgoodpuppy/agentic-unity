@@ -22,7 +22,7 @@ minutes for one fit is often the right tool.
 
 ## Leash: a helper for a common asset
 
-`AvatarAgentLeash` works with Reava's CHIRP collar and leash and with upstream
+`AvatarAgentLeash` works with [Reava's CHIRP collar and leash](https://reava.gumroad.com/l/CHIRP_Collars) and with upstream
 [OSCLeash](https://github.com/ZenithVal/OSCLeash). It only refers to those assets by path. You need your own
 copies. It shows a whole small job:
 

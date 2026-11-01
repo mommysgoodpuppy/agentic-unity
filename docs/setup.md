@@ -5,6 +5,8 @@ as usual, and skip the Linux parts. Check VRChat's
 [current Unity version](https://creators.vrchat.com/sdk/upgrade/current-unity-version/) before
 installing; these notes used 2022.3.22f1.
 
+On Linux, also read [linux.md](linux.md), which has the troubleshooting.
+
 ## Toolchain
 
 - **Unity Hub and the matching editor.** Use the version the project records. Add the **Windows

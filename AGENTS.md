@@ -8,7 +8,7 @@ project lives here.
     `--batch`, leave saving and undo where they can see them, and don't start another editor on the project.
   - **Headless:** they're busy or already in VRChat and just want "fix X and reupload". Unity must be closed
     on that project; run batch commands and report back with the results.
-- `docs/`: settled documentation. Start with `README.md`, then `docs/gotchas.md`.
+- `docs/`: settled documentation. Start with `README.md`, then `docs/gotchas.md`, plus `docs/linux.md` on Linux.
 - `markdown/`: plans, work in progress and notes that should outlast a session. Start with
   `markdown/README.md`, which also says where each file came from. Keep project memory here, not in
   a harness's own memory system.

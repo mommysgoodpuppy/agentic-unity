@@ -3,7 +3,7 @@
 <One sentence: which avatar or world this is.>
 
 - Unity project: `<path>`. Unity version: read `ProjectSettings/ProjectVersion.txt`.
-- Tools: `<path to agentic-unity>`. Read its `README.md` and `docs/gotchas.md` before working. Run its
+- Tools: `<path to agentic-unity>`. Read its `README.md` and `docs/gotchas.md` before working, plus `docs/linux.md` on Linux. Run its
   Python tools with `uv run` from that folder.
 - Install Unity packages with ALCOM or VCC.
 - Record current state, versions and open problems in `STATUS.md`. Separate what the owner reported,
