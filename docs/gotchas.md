@@ -47,8 +47,8 @@ Things that cost real time. Have your agent read this before its first session o
   `inspect_avatar_package.py`.
 - **Toggles and defaults.** Modular Avatar returns a toggled object to its saved state when the toggle is off, so save it
   in the off state, even if the toggle defaults to on. A target saved in the switched state never changes. `add-toggle`
-  does this for you. Test toggles in VRChat: `AvatarAgentVerify` can't judge Modular Avatar toggles and reports a plain,
-  working one as not switching.
+  does this for you. `AvatarAgentVerify` reads the built result, but can't judge a target whose mesh an optimizer merged,
+  and doesn't run the animator, so test toggles in VRChat too.
 - **Saved parameters.** VRCFury's and vendors' toggles may reset across worlds. `AvatarAgentSaved.Report`
   lists it.
 - **Rig tools adjust bones continuously in edit mode,** so whole-hierarchy rotation snapshots can change

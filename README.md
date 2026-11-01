@@ -87,7 +87,9 @@ an agent can update it, if you allow that.
   Meshia decimation and PhysBone merging (its renders still need a person's review: the test result had visible damage);
   `assemble` with a real outfit; and the accessory commands. `AgentWorldBuild.Export` built a real world; `Publish` was
   only run as far as its refusal for a world with no ID.
-- **Known not to work:** `AvatarAgentVerify` wrongly reports Modular Avatar toggles as not switching, even a plain new one.
+- **`AvatarAgentVerify`** now reads the built animator instead of running it. On a real avatar it passed a toggle confirmed
+  in VRChat, and said it couldn't judge a working toggle whose mesh the optimizer had merged. Its outright-fail path hasn't
+  been run in this form.
 - **Not run on these copies yet:** the SDK-panel `upload` command, a world publish, and the revert when an `edit` fails
   partway (bad batches were all rejected before applying).
 - **Windows and macOS are untested.** The editor lookup handles them, and on those systems the Linux-only
