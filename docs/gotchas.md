@@ -46,8 +46,8 @@ Things that cost real time. Have your agent read this before its first session o
 - **Vendor GUIDs collide.** Packages reuse GUIDs for different files. Import through
   `inspect_avatar_package.py`.
 - **Toggles and defaults.** An `isDefault`-on toggle whose target was also saved inactive can produce a
-  state where nothing shows it. Check the built result with `AvatarAgentVerify`. Set the target's saved
-  active state to match the default.
+  state where nothing shows it. Set the target's saved active state to match the default, and test it in VRChat.
+  `AvatarAgentVerify` can't judge Modular Avatar toggles: it reports a plain, new one as not switching.
 - **Saved parameters.** VRCFury's and vendors' toggles may reset across worlds. `AvatarAgentSaved.Report`
   lists it.
 - **Rig tools adjust bones continuously in edit mode,** so whole-hierarchy rotation snapshots can change

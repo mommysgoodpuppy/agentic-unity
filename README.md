@@ -75,7 +75,7 @@ an agent can update it, if you allow that.
   - everything compiles;
   - the recipes `inspect`, `preview`, `audit-meshes` and `add-toggle`;
   - `AvatarAgentPerf`, `Saved`, `Dump`, `Bench` (with `-benchParam`), `ShaderCompile`, `CrossSection` and
-    `FirstPerson`; `Verify` runs, and is only useful for object toggles;
+    `FirstPerson`;
   - the optimizer from start to finish, with its AAO stages and comparison renders;
   - the horn example's 35 checks;
   - in an open editor: `list`, `inspect`, `open`, `frame`, `preview`, `closeup`, `edit` (including rejected batches),
@@ -83,10 +83,13 @@ an agent can update it, if you allow that.
     and the Cross Section tool's window, `capture`, `open` and `capture-view`.
 - **Used for real on an actual avatar, on older package versions:** live recipes, the optimizer with decimation
   and mesh cuts, and headless avatar upload (in VRChat). World export and publish also, in an earlier form.
-- **Not run on these copies yet:** the SDK-panel `upload` command,
-  `AgentWorldBuild` (it compiles against Worlds SDK 3.10.5), a real upload (the refusal without a slot was
-  checked), Meshia decimation and PhysBone merging (the Robot gave them nothing to do), `assemble`,
-  `import`, `swap-meshes`, and the accessory commands.
+- **On a real, complex avatar on the same packages:** a real headless upload, confirmed in VRChat; the optimizer with
+  Meshia decimation and PhysBone merging (its renders still need a person's review: the test result had visible damage);
+  `assemble` with a real outfit; and the accessory commands. `AgentWorldBuild.Export` built a real world; `Publish` was
+  only run as far as its refusal for a world with no ID.
+- **Known not to work:** `AvatarAgentVerify` wrongly reports Modular Avatar toggles as not switching, even a plain new one.
+- **Not run on these copies yet:** the SDK-panel `upload` command, a world publish, and the revert when an `edit` fails
+  partway (bad batches were all rejected before applying).
 - **Windows and macOS are untested.** The editor lookup handles them, and on those systems the Linux-only
   `-force-vulkan` is left out. `vrchat_local_test.py`, `copy_unity_project.py` and save snapshots are
   Linux/macOS-minded (Steam and Proton paths, `findmnt`, `/bin/sh`).

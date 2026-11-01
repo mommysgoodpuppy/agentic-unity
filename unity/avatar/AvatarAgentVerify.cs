@@ -1,3 +1,4 @@
+// Known problem: reports Modular Avatar reactive toggles as not following, even a plain new one (MA 1.18.7). Don't rely on it for those.
 // Headless check that a menu toggle really switches its object once the avatar is built.
 //   Unity -batchmode -nographics -projectPath <proj> -executeMethod AvatarAgentVerify.Toggle \
 //     -avatarScene Assets/....unity -menuItem "My Toggle" -targetName <object name> -logFile <log>

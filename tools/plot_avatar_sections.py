@@ -75,7 +75,11 @@ def main():
         axis = section['axis']
         ax.set_xlabel(['Back ← Z (mm) → Front', 'X (mm)', 'X (mm)'][axis])
         ax.set_ylabel(['Y (mm)', 'Back ← Z (mm) → Front', 'Y (mm)'][axis])
-        ax.set_title(f"{section['label']} m | crossings: " + ', '.join(f'{k} {v}' for k, v in entry['intersections'].items()), fontsize=10)
+        # Only pairs that really cross fit in a title; every pair is in the .crossings.json.
+        crossing = sorted(((v, k) for k, v in entry['intersections'].items() if v), reverse=True)
+        shown = ', '.join(f'{k} {v}' for v, k in crossing[:3]) or 'none'
+        more = f' +{len(crossing) - 3} more' if len(crossing) > 3 else ''
+        ax.set_title(f"{section['label']} m | crossings: {shown}{more}", fontsize=8)
         ax.grid(alpha=.15)
         ax.legend(loc='best', fontsize=8)
     fig.suptitle('Posed mesh cross-sections · white crosses = surfaces crossing', fontsize=15)
