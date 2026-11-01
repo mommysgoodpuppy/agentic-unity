@@ -107,7 +107,7 @@ public static partial class AvatarAgent
         RequireDraft(path);
         for (int i = 0; i < SceneManager.sceneCount; i++)
             if (SceneManager.GetSceneAt(i).isDirty)
-                throw new InvalidOperationException("Unsaved scene open; save or checkpoint it before switching scenes");
+                throw new InvalidOperationException("Unsaved scene open; save it before switching scenes (a checkpoint keeps it unsaved)");
         EditorSceneManager.OpenScene(path, OpenSceneMode.Single);
     }
     static void RequireDraft(string path)

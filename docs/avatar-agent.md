@@ -68,7 +68,7 @@ avatar; without it, the single active avatar is used, and more than one is an er
 | `inspect-accessory`, `attach-accessory`, `export-accessory` | Lift a skinned accessory and its bones from another outfit into a reusable prefab |
 | `fix-accessory-bounds`, `audit-accessory-bounds` | Fix or check an accessory's culling bounds |
 | `attach-prefab`, `place-prefab` | Instantiate a prefab under a guarded anchor |
-| `add-toggle`, `add-fury-slider` | Add a Modular Avatar toggle; add a VRCFury blendshape slider |
+| `add-toggle`, `add-fury-slider` | Add a Modular Avatar toggle, saving its target in the off state; add a VRCFury blendshape slider |
 | `upload` | Live: build and upload through the SDK panel. Needs the owner's say-so |
 
 `edit` takes `edits`, each with `path`, `expectedName`, and `kind`:

@@ -83,7 +83,7 @@ an agent can update it, if you allow that.
     and the Cross Section tool's window, `capture`, `open` and `capture-view`.
 - **Used for real on an actual avatar, on older package versions:** live recipes, the optimizer with decimation
   and mesh cuts, and headless avatar upload (in VRChat). World export and publish also, in an earlier form.
-- **On a real, complex avatar on the same packages:** a real headless upload, confirmed in VRChat; the optimizer with
+- **On a real, complex avatar on the same packages:** a real headless upload and `add-toggle` toggles, confirmed in VRChat; the optimizer with
   Meshia decimation and PhysBone merging (its renders still need a person's review: the test result had visible damage);
   `assemble` with a real outfit; and the accessory commands. `AgentWorldBuild.Export` built a real world; `Publish` was
   only run as far as its refusal for a world with no ID.

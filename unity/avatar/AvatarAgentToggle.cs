@@ -14,7 +14,8 @@ public static partial class AvatarAgent
     // Adds a Modular Avatar toggle as a new child of the avatar root, laid out like the
     // existing Eyemask toggle: Object Toggle, Menu Installer and a synced, saved Menu Item
     // named after the object, on by default with defaultOn. edits[0] (kind "active", guarded
-    // by expectedName) is the object it switches and the state it switches to. One Undo step;
+    // by expectedName) is the object it switches and the state it switches to. The object is
+    // saved in the opposite state, which is what the toggle returns it to when off. One Undo step;
     // not saved.
     static Result AddToggle(GameObject avatar, Request req, Result result)
     {
@@ -43,6 +44,10 @@ public static partial class AvatarAgent
             var reference = new AvatarObjectReference();
             reference.Set(target.gameObject);
             toggle.Objects.Add(new ToggledObject { Object = reference, Active = edit.active });
+            // Modular Avatar returns the object to its saved state when the toggle is off, so a target
+            // saved in the switched state would never change. The scene holds the off state.
+            Undo.RecordObject(target.gameObject, label);
+            target.gameObject.SetActive(!edit.active);
             Undo.AddComponent<ModularAvatarMenuInstaller>(go);
             var item = Undo.AddComponent<ModularAvatarMenuItem>(go);
             item.Control = new VRCExpressionsMenu.Control
