@@ -54,6 +54,10 @@ Things that cost real time. Have your agent read this before its first session o
   with no edit having been made.
 - **Clones keep the blueprint ID.** Uploading a clone replaces the original upload. Clear the ID on a new
   variant.
+- **Headless builds aren't always 100% accurate.** If something looks or behaves wrong in VRChat, or before relying on an
+important upload, build and publish from the editor's SDK panel to compare.
+  Known differences: headless skips the panel's own validation and size checks, and can use different graphics
+  settings and shader cache entries.
 - **In-client checks are a separate result.** Headless builds tell you nothing about how physics,
   contacts, or first-person view feel. Say what hasn't been checked in VRChat.
 

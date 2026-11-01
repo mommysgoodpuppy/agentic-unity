@@ -39,7 +39,9 @@ Tell your agent which you want, or let it ask:
   works. Good for fitting and anything about looks. The agent can also see what you're looking at: `scene-view`
   gives it the editor camera's pose and your selection, and renders that exact view, so you can just say "that
   bit there" without a screenshot.
-- **Headless.** Unity closed, the agent does it all. Good for "fix X and reupload" while you're in VRChat.
+- **Headless.** Unity closed, the agent does it all. Good for "fix X and reupload" while you're in VRChat. These
+  builds aren't always 100% accurate, so if something seems off in VRChat, build and publish from the editor to
+  compare.
 
 ## Your first upload has to be by hand
 

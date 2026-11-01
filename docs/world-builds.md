@@ -50,6 +50,9 @@ name, image and settings alone. The world must already exist: its first upload h
 accept. Only
 do this when the owner asks.
 
+**Headless builds aren't always 100% accurate.** If something looks or behaves wrong in VRChat, or before relying on an
+important upload, build and publish from the editor's SDK panel to compare.
+
 ## Gotchas specific to worlds
 
 - **The `.vrcw` filename changes on every export,** so `--watch-worlds` doesn't catch a rebuild in a

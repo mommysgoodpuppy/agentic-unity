@@ -170,6 +170,9 @@ the avatar its PipelineManager names, using the SDK's saved login. It never crea
 leaves the name, image and settings alone. It skips the panel's own validation and size checks; the
 server enforces limits.
 
+**Headless builds aren't always 100% accurate.** If something looks or behaves wrong in VRChat, or before relying on an
+important upload, build and publish from the editor's SDK panel to compare.
+
 The first upload of an avatar has to be done in the GUI: the SDK panel has an agreement to accept. So a **new
 variant must get a new slot**: clear the copied blueprint ID and publish it once yourself in the SDK panel.
 Otherwise a clone overwrites the avatar it was cloned from.

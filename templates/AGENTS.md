@@ -17,7 +17,8 @@
   - **Unity open, user directing:** they watch the Scene view and say what to change. Send recipes without
     `--batch`, leave saving and undo where they can see them, and don't start another editor on the project.
   - **Headless:** they're busy or already in VRChat and just want "fix X and reupload". Unity must be closed
-    on that project; run batch commands and report back with the results.
+    on that project; run batch commands and report back with the results. Headless builds aren't always 100%
+    accurate: if the result seems off in VRChat, suggest that the owner builds and publishes from the editor to compare.
 
 ## Rules for the Unity project
 
