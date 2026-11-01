@@ -113,3 +113,5 @@ See [fxc2.md](fxc2.md).
 - `examples/horn-glow`: Avatars SDK and **VRCFury at compile time** (`com.vrcfury.api`). Modular
   Avatar isn't needed. lilToon is only for the eye glow.
 - `examples/horn-collar`: Avatars SDK and `AvatarMeshGeometry.cs` from `unity/avatar/`.
+- `examples/hardcoded`: the `unity/avatar/` helpers, plus whichever assets each one names. `AvatarAgentLeash` needs
+  your own CHIRP collar and OSCLeash.

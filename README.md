@@ -58,7 +58,7 @@ an agent can update it, if you allow that.
 | [docs/fxc2.md](docs/fxc2.md) | Shaders too heavy for Microsoft's compiler, and building them on Linux |
 | [docs/gotchas.md](docs/gotchas.md) | The expensive lessons. Worth having your agent read this first |
 | [docs/dependencies.md](docs/dependencies.md) | What each part needs, and what fails without it. The optimizer needs the most |
-| [examples/](examples/README.md) | A worked example of an agent modeling and shading a horn from code, with what it learned |
+| [examples/](examples/README.md) | A worked example of an agent modeling and shading a horn from code, with what it learned; plus [tools hardcoded to one avatar](examples/hardcoded/README.md) (leash, clipping, hat, sock) as examples of other kinds of tool |
 | `unity/avatar/` | Editor scripts for avatar projects (needs the Avatars SDK and Modular Avatar) |
 | `unity/world/` | Editor script for world projects (needs the Worlds SDK) |
 | `tools/` | Python and shell tools that drive Unity |

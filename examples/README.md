@@ -14,6 +14,8 @@ This is real work, reduced only by having avatar-specific comments removed:
   the horn looks as if it punched through it. A smaller and more self-contained example of fitting
   generated geometry to what's already on an avatar.
 
+There are more tools for specific jobs, hardcoded to one avatar, in [`hardcoded/`](hardcoded/README.md).
+
 The originals passed their checks and went into VRChat. **These copies were compile-checked but haven't
 been re-run,** so expect small fixes.
 

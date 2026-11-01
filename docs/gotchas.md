@@ -21,6 +21,11 @@ Things that cost real time. Have your agent read this before its first session o
 - **Sharing a project between two editors:** make a full separate copy, with its own `Library`. Don't
   hard-link writable assets or caches.
 
+## Linux graphics
+
+- **Scenes look wrong, or the log floods with keyword-space errors?** Check you're on Vulkan. Opening from ALCOM
+  uses OpenGL unless you set `-force-vulkan` there ([setup.md](setup.md)).
+
 ## Saving and crashes
 
 - **The Unity editor crashes, sometimes natively,** often around Play or script import. Save confirmed

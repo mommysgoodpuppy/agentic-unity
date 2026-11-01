@@ -35,7 +35,8 @@ project lives here.
   avatar-specific work in that avatar's own project notes. Before committing something copied from
   a private project, search it for those names.
 - When a helper is only useful with one avatar or outfit, leave it out, or make the avatar-specific
-  part an argument. It can also go in `examples/` if it teaches something, with names removed.
+  part an argument. It can also go in `examples/` if it teaches something, or in `examples/hardcoded/`, with a header saying it's
+  hardcoded and won't run as is. Those may keep their avatar names, but never include assets.
 - State what has actually been run. "Compiles", "ran in batch mode" and "checked in the VRChat
   client" are different claims; `README.md` records which apply.
 

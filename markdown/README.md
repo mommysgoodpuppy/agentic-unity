@@ -19,6 +19,7 @@ Copied on 2026-11-01. The originals stay authoritative for their own projects an
 | `tools/vrchat_local_test.py` | `../vrmodem/server/run_probe.ts` | New, Python, launch and log-following only |
 | `examples/horn-glow/` | The maintainer's HornGlow prototype project, `Assets/HornGlow` (Editor, Shaders) | Comments only. Generated assets, prefab and test scene left out: the builder makes them |
 | `examples/horn-collar/` | `../vrunity/scripts/AvatarAgentHornCollar.cs` | Comments, scene and folder paths, avatar lookup |
+| `examples/hardcoded/` | `../vrunity/scripts` | A header added; otherwise as they were. Leash included at the maintainer's direction: helper code only, no assets |
 | `examples/README.md` | `../vrunity/HORNGLOW.md` | Rewritten as lessons |
 | `tools/install_helpers.py`, `tools/init_snapshots.py`, `tools/unity_env.py` | | New |
 | `docs/*`, `templates/AGENTS.md` | Those repos' docs and `AGENTS.md` | Rewritten for general use |

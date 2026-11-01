@@ -30,8 +30,11 @@ Launch with **`-force-vulkan`**. On one tested AMD system the default OpenGL edi
 looking surfaces and flooded the log with `State comes from an incompatible keyword space`. lilToon
 materials exceeded OpenGL's 32 texture limit. Vulkan fixed both with no material or mesh changes.
 
-In ALCOM: the project's page, the dropdown next to **Open Unity**, **Change launch options**,
-**Customize command line arguments**, add `-force-vulkan`. The tools here pass it themselves on Linux.
+**Opening a project from ALCOM uses OpenGL until you set this,** even though the tools here pass the flag
+themselves. Either set it for one project (its page, the dropdown next to **Open Unity**, **Change launch
+options**, **Customize command line arguments**, add `-force-vulkan`), or set ALCOM's default Unity arguments in
+its Settings, for every project. Keep any arguments already there. To confirm, search `~/.config/unity3d/Editor.log`
+for `Vulkan`; `Creating OpenGL` means the flag didn't apply.
 
 ```sh
 ~/Unity/Hub/Editor/<version>/Editor/Unity -projectPath /path/to/Project -force-vulkan
