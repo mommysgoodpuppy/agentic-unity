@@ -83,7 +83,8 @@ public static class AvatarAgentCrossSection
         var bone=avatar.GetComponent<Animator>().GetBoneTransform(boneName);
         if(!bone)throw new Exception("Avatar has no humanoid "+boneName);
         var origin=avatar.transform.InverseTransformPoint(bone.position);
-        var wanted=renderers==null||renderers.Length==0?null:renderers.Select(r=>r.Trim()).Where(r=>r.Length>0).ToArray();
+        var wanted=renderers?.Select(r=>r.Trim()).Where(r=>r.Length>0).ToArray();
+        if(wanted?.Length==0)wanted=null;
         var samples=new List<Sample>();
         foreach(var renderer in avatar.GetComponentsInChildren<SkinnedMeshRenderer>(true))
         {
@@ -130,7 +131,7 @@ public class AvatarCrossSectionWindow:EditorWindow
     AvatarAgentCrossSection.Snapshot snapshot;
     AvatarAgentCrossSection.Section section;
     int axis;float offset;bool sceneOverlay=true,clipScene;string renderers="";
-    double nextRefresh;
+    double nextRefresh;string lastRefreshError;
     [MenuItem("Tools/Avatar Agent/Cross Section")]
     public static void Open(){var win=GetWindow<AvatarCrossSectionWindow>("Mesh Cross Section");win.minSize=new Vector2(500,560);win.avatar=AvatarAgentCrossSection.Avatar();win.Refresh();win.Show();}
     static void SetClipShader(Shader shader,string tag){foreach(SceneView view in SceneView.sceneViews)view.SetSceneViewShaderReplace(shader,tag);}
@@ -189,7 +190,8 @@ public class AvatarCrossSectionWindow:EditorWindow
     {
         if(!avatar||EditorApplication.isCompiling||EditorApplication.isUpdating||EditorApplication.isPlaying||EditorApplication.timeSinceStartup<nextRefresh)return;
         nextRefresh=EditorApplication.timeSinceStartup+.4;
-        try{Refresh();}catch(Exception e){Debug.LogWarning("Cross-section refresh: "+e.Message);}
+        try{Refresh();lastRefreshError=null;}
+        catch(Exception e){if(e.Message!=lastRefreshError)Debug.LogWarning("Cross-section refresh: "+e.Message);lastRefreshError=e.Message;}
     }
     void OnDisable(){SceneView.duringSceneGui-=DrawScene;EditorApplication.update-=RefreshLive;SetClipShader(null,null);}
     void Refresh(){if(!avatar)return;snapshot=AvatarAgentCrossSection.Capture(avatar,renderers.Split(','),null);Rebuild();}

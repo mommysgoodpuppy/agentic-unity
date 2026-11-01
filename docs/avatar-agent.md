@@ -23,10 +23,15 @@ Ask which one they want if it isn't clear.
 # Headless: Unity starts, runs the recipe and exits. Close the project's editor first.
 uv run tools/avatar_agent.py /path/to/Project recipe.json --batch
 
-# Live: goes to the editor you have open. Unity must have imported the helpers (focus it if
-# nothing happens) and not be in play mode.
+# Live: goes to the editor you have open. Unity must have imported the helpers and not be in play mode.
 uv run tools/avatar_agent.py /path/to/Project recipe.json
 ```
+
+**If a live request sits unclaimed,** Unity may need bringing to the front. This happens only some of the time, and
+the cause isn't pinned down. In one Linux test, requests were answered in about 0.5 s with the editor minimized,
+including a render. Unity normally notices changed scripts only when it gets focus, and the queue waits while it
+compiles. A `refresh` request picked up a changed script without anyone touching the editor, but the window
+un-minimized itself during that. So try `refresh` after changing helpers, and expect the window to pop up.
 
 The launcher picks the project's recorded editor version; `--editor` or `$UNITY_EDITOR` overrides it.
 Success means both a clean editor exit and an `ok` report. A live request that times out unclaimed is
